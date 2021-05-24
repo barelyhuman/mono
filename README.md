@@ -37,7 +37,7 @@ This is a generic flavor that most people could use if you are moving code from 
 
 ### esm flavor 
 
-This is the preferred way of going ahead if you are building a new project and have no dependencies on older node versions and can start with the latest LTS which supports modules. This is a pure module based approach and you don't need any additional build setup for the `shared` and `components` steps as they are all modules and will be imported as such in the `core` and `web` projects. 
+This is the preferred way of going ahead if you are building a new project and have no dependencies on older node versions and can start with the latest LTS which supports modules. This is a pure module based approach and you don't need any additional build setup for the `shared` and `components` steps as they are all modules and will be imported as such in the `core` and `web` projects with the exception of components since they need to be converted to JS from JSX
 
 ### dev-modified 
 

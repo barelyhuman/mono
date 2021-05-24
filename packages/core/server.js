@@ -1,8 +1,8 @@
-const Koa = require("koa");
-const cors = require("@koa/cors");
-const Router = require("@koa/router");
-const bodyParser = require("koa-bodyparser");
-const { PLANS } = require("@mono/shared");
+import Koa from "koa";
+import cors from "@koa/cors";
+import Router from "@koa/router";
+import bodyParser from "koa-bodyparser";
+import { PLANS } from "@mono/shared";
 
 const PORT = process.env.PORT || 3000;
 

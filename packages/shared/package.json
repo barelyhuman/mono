@@ -1,20 +1,10 @@
 {
   "name": "@mono/shared",
   "version": "0.0.1",
-  "main": "dist/index.js",
+  "type": "module",
+  "exports": "./lib/index.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "build": "babel lib -d dist"
-  },
-  "dependencies": {
-    "@babel/cli": "^7.14.3",
-    "@babel/core": "^7.14.3",
-    "@babel/preset-env": "^7.14.2",
-    "@babel/preset-react": "^7.13.13"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ]
+    "build": "echo 'built shared'"
   }
 }

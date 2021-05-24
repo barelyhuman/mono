@@ -1,25 +1,15 @@
 {
   "name": "@mono/components",
   "version": "0.0.1",
-  "main": "dist/index.js",
+  "main": "source/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "babel source -d dist"
+    "build": "echo 'built components'"
   },
   "dependencies": {
-    "@babel/cli": "^7.14.3",
-    "@babel/core": "^7.14.3",
-    "@babel/preset-env": "^7.14.2",
-    "@babel/preset-react": "^7.13.13",
     "styled-jsx": "^3.4.4"
   },
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ],
-    "plugins": [
-      "styled-jsx/babel"
-    ]
+  "peerDependencies": {
+    "react": "^17.0.2"
   }
 }

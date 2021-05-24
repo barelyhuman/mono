@@ -15,7 +15,6 @@
     "web:build": "yarn workspace @mono/web build",
     "core:start": "yarn workspace @mono/core start",
     "components:build": "yarn workspace @mono/components build",
-    "shared:build": "yarn workspace @mono/shared build",
     "build": "yarn workspaces run build"
   }
 }

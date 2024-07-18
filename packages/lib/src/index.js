@@ -15,7 +15,3 @@ export async function add(x, y) {
 export async function sub(x, y) {
   return x - y
 }
-
-export function mul(x, y) {
-  return x * y
-}

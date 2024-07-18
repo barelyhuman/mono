@@ -4,20 +4,24 @@
   "repository": "git@github.com:barelyhuman/lib.git",
   "license": "MIT",
   "author": "Reaper <ahoy@barelyhuman.dev>",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "types": "./dist/cjs/index.d.cts",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.mjs",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": {
+        "import": "./dist/esm/index.d.mts",
+        "require": "./dist/cjs/index.d.cts"
+      },
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.js"
     },
     "./package.json": "./package.json"
   },
   "scripts": {
     "build": "./build.mjs",
     "dev": "./build.mjs --dev",
-    "next": "bumpp",
+    "package:lint": "publint",
     "fix": "prettier --write .",
     "test": "uvu -r esm tests",
     "test:ci": "c8 uvu -r esm tests "
@@ -29,11 +33,15 @@
   "devDependencies": {
     "@barelyhuman/prettier-config": "^1.0.0",
     "c8": "^8.0.1",
+    "esbuild-multicontext": "^0.11.0",
     "esm": "^3.2.25",
     "husky": "^8.0.3",
     "prettier": "^2.7.1",
+    "publint": "^0.2.9",
+    "rollup": "^4.18.1",
+    "rollup-plugin-dts": "^6.1.1",
     "sizesnap": "^0.2.1",
-    "typescript": "^4.7.4",
+    "typescript": "^4.9.5",
     "uvu": "^0.5.6"
   }
 }

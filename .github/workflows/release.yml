@@ -1,0 +1,42 @@
+name: release 
+on: 
+  push: 
+    tags: 
+      - '*'
+ 
+jobs: 
+  publish: 
+    runs-on: ubuntu-latest 
+    permissions:
+      pull-requests: write
+    steps: 
+      - uses: actions/checkout@v4 
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.4.0
+
+      - uses: actions/setup-node@v4 
+        with: 
+          node-version-file: .nvmrc
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies 
+        run: pnpm i --frozen-lockfile
+      - name: Test 
+        run: pnpm test 
+      - name: Compile 
+        run: pnpm build
+      - name: Get Package Version 
+        id: get-package-version 
+        uses: stevenbenitez/get-package-version-action@v1 
+      - name: Lint Package 
+        run: pnpm package:lint 
+      
+      - name: Publish 
+        run: | 
+          pnpm publish:ci
+        env: 
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} 
+
+      

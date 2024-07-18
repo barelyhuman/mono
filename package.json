@@ -1,7 +1,12 @@
 {
   "name": "mono",
   "scripts": {
-    "prepare": "husky install"
+    "test": "pnpm -r test",
+    "build": "pnpm -r build --workspace-concurrency",
+    "next": "lerna version --sync-workspace-lock",
+    "prepare": "husky install",
+    "package:lint": "pnpm -r package:lint",
+    "publish:ci": "lerna publish from-git --registry 'https://registry.npmjs.org' --yes"
   },
   "private": true,
   "keywords": [],
@@ -14,6 +19,7 @@
   },
   "devDependencies": {
     "@lerna-lite/cli": "^3.7.1",
+    "@lerna-lite/publish": "^3.7.1",
     "@lerna-lite/version": "^3.7.1",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1"

@@ -4,7 +4,6 @@
     "test": "pnpm -r test",
     "build": "pnpm -r build --workspace-concurrency",
     "next": "lerna version --changelog --sync-workspace-lock",
-    "gen:changelog": "npx conventional-changelog --preset angular --release-count 0 --outfile ./CHANGELOG.md --verbose",
     "prepare": "husky install",
     "package:lint": "pnpm -r package:lint",
     "publish:ci": "lerna publish from-git --registry 'https://registry.npmjs.org' --yes"
@@ -22,7 +21,6 @@
     "@lerna-lite/cli": "^3.7.1",
     "@lerna-lite/publish": "^3.7.1",
     "@lerna-lite/version": "^3.7.1",
-    "conventional-changelog-cli": "^5.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1"
   },

@@ -3,5 +3,6 @@
   "version": "0.0.1",
   "changelogPreset": "angular",
   "npmClient": "pnpm",
+  "changelog": true,
   "packages": ["packages/*"]
 }

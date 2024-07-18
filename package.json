@@ -1,0 +1,24 @@
+{
+  "name": "mono",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "private": true,
+  "keywords": [],
+  "author": "reaper<ahoy@barelyhuman.dev>",
+  "license": "MIT",
+  "prettier": "@barelyhuman/prettier-config",
+  "dependencies": {
+    "@barelyhuman/prettier-config": "^1.0.0",
+    "prettier": "^2.7.1"
+  },
+  "devDependencies": {
+    "@lerna-lite/cli": "^3.7.1",
+    "@lerna-lite/version": "^3.7.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1"
+  },
+  "lint-staged": {
+    "*.{js,css,md,json}": "prettier --write"
+  }
+}

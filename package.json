@@ -4,6 +4,7 @@
     "test": "pnpm -r test",
     "build": "pnpm -r build --workspace-concurrency",
     "next": "lerna version --changelog --sync-workspace-lock",
+    "gen:changelog": "npx conventional-changelog --preset angular --release-count 0 --outfile ./CHANGELOG.md --verbose",
     "prepare": "husky install",
     "package:lint": "pnpm -r package:lint",
     "publish:ci": "lerna publish from-git --registry 'https://registry.npmjs.org' --yes"
@@ -19,7 +20,6 @@
   },
   "devDependencies": {
     "@lerna-lite/cli": "^3.7.1",
-    "@lerna-lite/exec": "^3.7.1",
     "@lerna-lite/publish": "^3.7.1",
     "@lerna-lite/version": "^3.7.1",
     "conventional-changelog-cli": "^5.0.0",
@@ -28,6 +28,5 @@
   },
   "lint-staged": {
     "*.{js,css,md,json}": "prettier --write"
-  },
-  "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903"
+  }
 }

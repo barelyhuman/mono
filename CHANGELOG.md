@@ -1,5 +1,18 @@
 ## (2024-07-18)
 
+## <small>0.0.4 (2024-07-18)</small>
+
+- random addition
+  ([17901fa](https://github.com/barelyhuman/mono/commit/17901fa))
+- v0.0.4 ([4883a6c](https://github.com/barelyhuman/mono/commit/4883a6c))
+- feat: add mul ([10c73c4](https://github.com/barelyhuman/mono/commit/10c73c4))
+
+## <small>0.0.3 (2024-07-18)</small>
+
+- v0.0.3 ([8c255ba](https://github.com/barelyhuman/mono/commit/8c255ba))
+- feat: add sub ([96e3c43](https://github.com/barelyhuman/mono/commit/96e3c43))
+- chore: update changelog
+  ([7b2de34](https://github.com/barelyhuman/mono/commit/7b2de34))
 - chore: update corepack
   ([ae413b3](https://github.com/barelyhuman/mono/commit/ae413b3))
 

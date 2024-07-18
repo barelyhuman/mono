@@ -2,5 +2,8 @@
   "$schema": "node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
   "version": "0.0.4",
   "npmClient": "pnpm",
+  "conventionalCommits": true,
+  "changelog": true,
+  "changelogPreset": "angular",
   "packages": ["packages/*"]
 }
